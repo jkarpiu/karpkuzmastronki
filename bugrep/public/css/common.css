@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+.form-control{
+    width: 90vw;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-add_send {
+    width: 90vw;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
