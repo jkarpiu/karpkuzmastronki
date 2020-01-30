@@ -20,7 +20,10 @@ class Bugs extends Controller
                 -> withInput();
         }
         $page = \App\Bugs::create([]);
-        $page->fill($data);
+        $page->name = $data['bug_name'];
+        $page->desc = $data['desc'];
+        $page->situation = $data['when'];
+        $page->user_ip_remote = $_SERVER['REMOTE_ADDR'];
         $page->save();
         return back();
     }
