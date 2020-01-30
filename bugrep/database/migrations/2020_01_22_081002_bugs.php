@@ -21,6 +21,7 @@ class Bugs extends Migration
             $table->longText('situation')-> default(' ');
             $table->string('user_ip_remote') -> default(' ');
             $table->string('user_ip_http') -> default(' ');
+            $table->boolean('fixed') -> default(0);
             $table->timestamps();
         });
     }

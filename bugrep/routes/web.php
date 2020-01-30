@@ -19,9 +19,7 @@ Route::get('/add', function () {
     return view('add', ['title'=> 'Dodaj']);
 });
 
-Route::get('/browse', function () {
-    return view('view', ['title'=> 'Przeglądaj']);
-});
+Route::get('/browse', "Bugs@browse");
 
 Route::post('/add_send',"Bugs@add");
 

@@ -27,4 +27,12 @@ class Bugs extends Controller
         $page->save();
         return back();
     }
+
+    public function browse() {
+        $list = \App\Bugs::where('fixed', 0)
+        ->orderBy('created_at', 'desc')
+        ->take(50)
+        ->get();
+        return view('list', ['title' => 'Przeglądaj', 'list' => $list]);
+    }
 }
