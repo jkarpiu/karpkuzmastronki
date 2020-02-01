@@ -44,10 +44,11 @@ class Bugs extends Controller
     }
     public function search(){
         $searching = $_GET['item'];
-        $found = \App\Bugs::where('name', 'LIKE', $searching)
+        $found = \App\Bugs::where('name', 'LIKE','%'.$searching.'%')
+            ->orWhere('desc', 'LIKE', '%'.$searching.'%')
             ->orderBy('created_at', 'desc')
-            ->take(10)
+            ->take(50)
             ->get();
-        dd ($found); // jeszscze nie działą
+        return view('search', ['title' => 'Szukaj: '.$searching, 'finded' => $found]);
     }
 }
