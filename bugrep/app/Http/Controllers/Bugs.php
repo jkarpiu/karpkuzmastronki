@@ -35,4 +35,19 @@ class Bugs extends Controller
         ->get();
         return view('list', ['title' => 'Przeglądaj', 'list' => $list]);
     }
+    public function view($bug_id) {
+        $bug = \App\Bugs::where('id', $bug_id)
+            ->take(1)
+            ->get();
+
+        return view('view', ['title' => 'Bug #'.$bug_id, 'bug' => $bug]);
+    }
+    public function search(){
+        $searching = $_GET['item'];
+        $found = \App\Bugs::where('name', 'LIKE', $searching)
+            ->orderBy('created_at', 'desc')
+            ->take(10)
+            ->get();
+        dd ($found); // jeszscze nie działą
+    }
 }

@@ -23,6 +23,10 @@ Route::get('/browse', "Bugs@browse");
 
 Route::post('/add_send',"Bugs@add");
 
+Route::get('/view/{bug_id}', "Bugs@view" );
+
+Route::get('/search', 'Bugs@search');
+
 Route::post('users/{id}', function ($id) {
 
 });

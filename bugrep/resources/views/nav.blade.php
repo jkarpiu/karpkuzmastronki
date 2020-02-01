@@ -17,8 +17,8 @@
       <a class="nav-link add" href="/browse">Przeglądaj</a>
     </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Wyszukaj BUG-a">
+      <form class="form-inline my-2 my-lg-0" action="search" method="GET">
+        <input class="form-control mr-sm-2" type="search" name="item" placeholder="Wyszukaj BUG-a">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
       </form>
     </div>
