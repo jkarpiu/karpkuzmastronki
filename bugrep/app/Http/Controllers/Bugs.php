@@ -47,7 +47,7 @@ class Bugs extends Controller
         $found = \App\Bugs::where('name', 'LIKE','%'.$searching.'%')
             ->orWhere('desc', 'LIKE', '%'.$searching.'%')
             ->orderBy('created_at', 'desc')
-            ->take(50)
+            ->take(0)
             ->get();
         return view('search', ['title' => 'Szukaj: '.$searching, 'finded' => $found]);
     }
