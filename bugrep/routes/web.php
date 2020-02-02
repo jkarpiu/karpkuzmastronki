@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home', ['title' => '']);
+    return view('root', ['title' => '']);
 });
 
 Route::get('/add', function () {
@@ -30,3 +30,7 @@ Route::get('/search', 'Bugs@search');
 Route::post('users/{id}', function ($id) {
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
