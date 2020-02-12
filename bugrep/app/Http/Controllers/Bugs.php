@@ -39,8 +39,12 @@ class Bugs extends Controller
         $bug = \App\Bugs::where('id', $bug_id)
             ->take(1)
             ->get();
+        $comments = \App\disc::where('active', 1)
+            ->orderBy('score', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->get();
 
-        return view('view', ['title' => 'Bug #'.$bug_id, 'bug' => $bug]);
+        return view('view', ['comments' => $comments,'title' => 'Bug #'.$bug_id, 'bug' => $bug]);
     }
     public function search(){
         $searching = $_GET['item'];
@@ -50,5 +54,30 @@ class Bugs extends Controller
             ->take(1)
             ->get();
         return view('search', ['title' => 'Szukaj: '.$searching, 'finded' => $found]);
+    }
+
+    public function commentadd(){
+        $commentData = Request::only(['username', 'content', 'bug_id']);
+        $dataBase = \App\disc::create([]);
+        $dataBase -> username = $commentData['username'];
+        $dataBase -> content = $commentData['content'];
+        $dataBase -> score = 1;
+        $dataBase -> for_id = $commentData['bug_id'];
+        $dataBase -> save();
+        return back();
+    }
+
+    public function complus(){
+        $comid = Request::only('com_id');
+        $score = \App\disc::where('id', $comid);
+        dd($score);
+      //  $score -> score = $score -> score + 1;
+    }
+
+    public function comminux(){
+        $comid = Request::only('com_id');
+        $score = \App\disc::where('id', $comid) -> score;
+        dd ($score);
+      //  $score = $score - 1;
     }
 }

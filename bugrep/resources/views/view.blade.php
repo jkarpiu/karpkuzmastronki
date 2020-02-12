@@ -25,6 +25,6 @@
     <p>{{ $bug[0]->situation }}</p>
 </div>
 
-
+@include('comments')
 
 @include('base_end')

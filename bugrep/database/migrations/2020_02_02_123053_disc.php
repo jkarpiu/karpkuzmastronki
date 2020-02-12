@@ -13,12 +13,13 @@ class Disc extends Migration
      */
     public function up()
     {
-        Schema::create('disc', function(Blueprint $table){
+        Schema::create('discs', function(Blueprint $table){
             $table->bigIncrements('id');
-            $table->integer('for_id');
-            $table->string('username');
-            $table->longText('content');
-            $table->integer('score');
+            $table->integer('for_id')->default(0);
+            $table->string('username')->default(' ');
+            $table->longText('content')->default(' ');
+            $table->integer('score')->default(0);
+            $table->boolean('active')->default(1);
             $table->timestamps();
         });
     }

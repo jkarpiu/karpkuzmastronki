@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('root', ['title' => '']);
 });
 
+Route::post('/commadd', "Bugs@commentadd");
+
+Route::post('/com_plus', 'Bugs@complus');
+
+Route::post('/com_minus', 'Bugs@comminus');
+
 Route::get('/add', function () {
     return view('add', ['title'=> 'Dodaj']);
 });
