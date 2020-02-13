@@ -40,6 +40,7 @@ class Bugs extends Controller
             ->take(1)
             ->get();
         $comments = \App\disc::where('active', 1)
+            ->where('for_id', $bug_id)
             ->orderBy('score', 'desc')
             ->orderBy('created_at', 'desc')
             ->get();
@@ -68,10 +69,10 @@ class Bugs extends Controller
     }
 
     public function complus(){
-        $comid = Request::only('com_id');
+        $comid = Request::only(['com_id']);
         $score = \App\disc::where('id', $comid);
-        dd($score);
-      //  $score -> score = $score -> score + 1;
+        //dd($score);
+        $score -> score = $score -> score + 1;
     }
 
     public function comminux(){
