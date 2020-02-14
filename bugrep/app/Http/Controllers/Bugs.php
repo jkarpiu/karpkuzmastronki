@@ -70,14 +70,14 @@ class Bugs extends Controller
 
     public function complus(){
         $comid = Request::only(['com_id']);
-        $score = \App\disc::where('id', $comid);
-        //dd($score);
+        $score = \App\disc::where('id', $comid->for_id);
+        dd($comid);
         $score -> score = $score -> score + 1;
     }
 
     public function comminux(){
         $comid = Request::only('com_id');
-        $score = \App\disc::where('id', $comid) -> score;
+        $score = \App\disc::where('id', $comid[0]);
         dd ($score);
       //  $score = $score - 1;
     }
