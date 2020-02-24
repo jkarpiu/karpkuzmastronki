@@ -19,6 +19,7 @@ class Disc extends Migration
             $table->string('username')->default(' ');
             $table->longText('content')->default(' ');
             $table->integer('score')->default(0);
+            $table->boolean('fixes')->default(0);
             $table->boolean('active')->default(1);
             $table->timestamps();
         });

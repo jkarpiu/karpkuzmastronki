@@ -9,16 +9,16 @@
         <p>Utworzono: {{$bug[0] -> created_at}}</p>
         @if ($bug[0]->fixed == 0)
             <h4 style="background-color: red;">Do naprawienia</h4>
-            @if ( Auth::user() -> name == $bug[0] ->username)
+            @if ( Auth::user() != null && Auth::user() -> name == $bug[0] ->username)
             <form action="/fixed" method="post">
-                <input type="hidden" name="username" value="{{ $bug[0]->username }}">
+                <input type="hidden" name="userID" value="{{ $bug[0]->userID }}">
                 <input type="hidden" name="id" value="{{ $bug[0]->id }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <button type="submit" class="btn btn-success">Naprawiono!</button>
             </form>
             @endif
         @else
-            <h4 style="background-color: green;">Naprawiony</h4>
+        <h4 style="background-color: green;">Naprawiony {{ $bug[0] -> updated_at }}</h4>
         @endif
     </div>
 </div>

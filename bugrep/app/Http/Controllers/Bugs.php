@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Request;
 
 class Bugs extends Controller
@@ -20,6 +21,8 @@ class Bugs extends Controller
                 -> withInput();
         }
         $page = \App\Bugs::create([]);
+        $page -> username = Auth::user() -> name;
+        $page -> userID = Auth::id();
         $page->name = $data['bug_name'];
         $page->desc = $data['desc'];
         $page->situation = $data['when'];
@@ -41,6 +44,7 @@ class Bugs extends Controller
             ->get();
         $comments = \App\disc::where('active', 1)
             ->where('for_id', $bug_id)
+            ->orderBy('fixes', 'desc')
             ->orderBy('score', 'desc')
             ->orderBy('created_at', 'desc')
             ->get();
@@ -82,10 +86,27 @@ class Bugs extends Controller
         return back();
     }
     public function fixed(){
-        $bug = Request::all();
-        dd (Auth::name());
-        if ($bug ['username'] == Auth::user() -> name) {
-            \App\Bugs::where('id', $bug['id']) -> increment("fixed", 1);
+        $data = Request::all();
+        if ($data ['userID'] == Auth::id()) {
+            $bug = \App\Bugs::where('id', $data['id']) -> first();
+            $bug -> fixed = 1;
+            $bug -> fixedBy = "Update";
+            $bug -> save();
+            return back();
         }
     }
+    public function fixedByComment(){
+        $data = Request::all();
+        if ($data ['userID'] == Auth::id()) {
+            $bug = \App\Bugs::where('id', $data['id']) -> first();
+            $bug -> fixed = 1;
+            $comment = \App\disc::where('id', $data['commentID']) -> first();
+            $comment -> fixes = 1;
+            $bug -> fixedBy = $data['commentID'];
+            $comment-> save();
+            $bug -> save();
+            return back();
+        }
+    }
+
 }

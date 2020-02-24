@@ -16,12 +16,14 @@ class Bugs extends Migration
         Schema::create('bugs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('username')->default(' Anon');
+            $table->integer('userID')->default(-1);
             $table->string('name') -> default(' ');
             $table->longText('desc')-> default(' ');
             $table->longText('situation')-> default(' ');
             $table->string('user_ip_remote') -> default(' ');
             $table->string('user_ip_http') -> default(' ');
             $table->boolean('fixed') -> default(0);
+            $table->string('fixedBy') -> default('notFixed');
             $table->timestamps();
         });
     }

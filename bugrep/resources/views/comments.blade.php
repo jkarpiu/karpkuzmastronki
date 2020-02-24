@@ -18,6 +18,19 @@
             <form action="/com_minus" method="POST"><input type="hidden" name="com_id" value="{{$com->id}}"> <input
                     type="hidden" name="_token" value="{{ csrf_token() }}"><button type="submit"
                     class="btn btn-danger">-</button></form>
+                    @if ( $bug[0]->fixed == 0 &&  Auth::user() != null && Auth::user() -> name == $bug[0] ->username)
+                    <form action="/fixedbyuser" method="post">
+                        <input type="hidden" name="userID" value="{{ $bug[0]->userID }}">
+                        <input type="hidden" name="commentUsername" value="{{ $com->username }}">
+                        <input type="hidden" name="commentID" value="{{ $com->id }}">
+                        <input type="hidden" name="id" value="{{ $bug[0]->id }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="btn btn-success">Naprawiono!</button>
+                    </form>
+                    @elseif ($com -> fixes == 1)
+                        <h4 style="background-color: green;">Ten komentarz naprawił to gówno</h4>
+                    @endif
+
         </div>
     </div>
 </div>
