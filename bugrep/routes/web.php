@@ -25,6 +25,10 @@ Route::get('/add', function () {
     return view('add', ['title'=> 'Dodaj']);
 });
 
+Route::post('/fixedbyuser', 'Bugs@fixedUser');
+
+Route::post('/fixed', 'Bugs@fixed');
+
 Route::get('/browse', "Bugs@browse");
 
 Route::post('/add_send',"Bugs@add");

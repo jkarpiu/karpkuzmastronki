@@ -70,15 +70,22 @@ class Bugs extends Controller
 
     public function complus(){
         $comid = Request::only(['com_id']);
-        $score = \App\disc::where('id', $comid->for_id);
-        dd($comid);
-        $score -> score = $score -> score + 1;
+        // dd ($comid);
+        \App\disc::where('id', $comid["com_id"]) ->increment("score", 1);
+        return back();
     }
 
-    public function comminux(){
-        $comid = Request::only('com_id');
-        $score = \App\disc::where('id', $comid[0]);
-        dd ($score);
-      //  $score = $score - 1;
+    public function comminus(){
+        $comid = Request::only(['com_id']);
+        // dd ($comid);
+        \App\disc::where('id', $comid["com_id"]) ->decrement("score", 1);
+        return back();
+    }
+    public function fixed(){
+        $bug = Request::all();
+        dd (Auth::name());
+        if ($bug ['username'] == Auth::user() -> name) {
+            \App\Bugs::where('id', $bug['id']) -> increment("fixed", 1);
+        }
     }
 }
