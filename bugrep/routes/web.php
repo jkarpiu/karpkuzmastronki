@@ -33,6 +33,8 @@ Route::get('/browse', "Bugs@browse");
 
 Route::post('/add_send',"Bugs@add");
 
+Route::get('/archive', "Bugs@archive");
+
 Route::get('/view/{bug_id}', "Bugs@view" );
 
 Route::get('/search', 'Bugs@search');

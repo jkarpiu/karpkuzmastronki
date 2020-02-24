@@ -1,6 +1,6 @@
 @include('base_beg')
 
-<center> <h3>Lista nienaprawionych BUG-ów</h3> </center>
+<center> <h3>Lista naprawionych BUG-ów</h3> </center>
 
 @foreach ($list as $list_el)
     <a href="/view/{{ $list_el->id }}">

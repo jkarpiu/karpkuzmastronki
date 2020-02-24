@@ -16,6 +16,9 @@
     <li class="nav-item">
       <a class="nav-link add" href="/browse">Przeglądaj</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link add" href="/archive">Archiwum</a>
+      </li>
       </ul>
       <!-- Right Side Of Navbar -->
       <ul class="navbar-nav ml-auto">

@@ -34,10 +34,17 @@ class Bugs extends Controller
     public function browse() {
         $list = \App\Bugs::where('fixed', 0)
         ->orderBy('created_at', 'desc')
-        ->take(50)
-        ->get();
+        ->paginate(20);
         return view('list', ['title' => 'Przeglądaj', 'list' => $list]);
     }
+
+    public function archive() {
+        $list = \App\Bugs::where('fixed', 1)
+        ->orderBy('created_at', 'desc')
+        ->paginate(20);
+        return view('list', ['title' => 'Przeglądaj', 'list' => $list]);
+    }
+
     public function view($bug_id) {
         $bug = \App\Bugs::where('id', $bug_id)
             ->take(1)
