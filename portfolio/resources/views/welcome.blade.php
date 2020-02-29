@@ -48,7 +48,7 @@
                             <a class="nav-link js-scroll-trigger" href="#about">O Nas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#features">Nasze Cechy</a>
+                            <a class="nav-link js-scroll-trigger" href="#features">Co Oferujemy</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="#projects">Nasze Projekty</a>
@@ -82,21 +82,19 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
+                        <h2 class="text-white mt-0">Dowiedz się czegoś o nas!</h2>
                         <hr class="divider light my-4">
-                        <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up
-                            and running in no time! Choose one of our open source, free to download, and easy to use
-                            themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#features">Get Started!</a>
+                        <p class="text-white-50 mb-4">Jesteśmy młodymi, pełnymi ambicji ludźmi, którzy od kilku lat zajmują się projektowaniem i tworzeniem stron internetowych. Jest to nasza pasja i źródło dochodów, które pomaga nam w rozwoju. Zapewniamy naszym klientom zarówno front-end (wygląd strony), jak i back-end (zaplecze techniczne).</p>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#features">Zobacz tu!</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Nasze Cechy -->
+        <!-- Co Oferujemy -->
         <section class="page-section" id="features">
             <div class="container">
-                <h2 class="text-center mt-0">Nasze Cechy</h2>
+                <h2 class="text-center mt-0">Co oferujemy</h2>
                 <hr class="divider my-4">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 text-center">
@@ -220,8 +218,8 @@
         <!-- Bugi -->
         <section class="page-section bg-dark text-white">
             <div class="container text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
+                <h2 class="mb-4">Masz jakiś problem ze swoją stroną?</h2>
+                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Zgłoś teraz!</a>
             </div>
         </section>
 
@@ -243,7 +241,7 @@
                     <div class="col-lg-4 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                         <!-- Make sure to change the email address in anchor text AND the link below! -->
-                        <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+                        <a class="d-block" href="mailto:karpkuzma@gmail.com">karpkuzma@gmail.com</a>
                     </div>
                 </div>
             </div>
