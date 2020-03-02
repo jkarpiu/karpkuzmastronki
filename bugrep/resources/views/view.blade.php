@@ -5,7 +5,7 @@
         <h6>Nazwa: </h6>
         <h2>{{ $bug[0]->name }}</h2>
         <small>ID: {{ $bug[0]->id  }}</small>
-        <p>Utworzone przez: {{ $bug[0] -> username }}</p>
+    <p>Utworzone przez: <a href="/user/{{ $bug[0] -> userID }}"> {{ $bug[0] -> username }}</a></p>
         <p>Utworzono: {{$bug[0] -> created_at}}</p>
         @if ($bug[0]->fixed == 0)
             <h4 style="background-color: red;">Do naprawienia</h4>

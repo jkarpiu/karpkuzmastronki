@@ -37,6 +37,10 @@ Route::get('/archive', "Bugs@archive");
 
 Route::get('/view/{bug_id}', "Bugs@view" );
 
+Route::get('/user/{user_id}', "Bugs@userProfile" );
+
+Route::post('/comdel', "Bugs@comDelete");
+
 Route::get('/search', 'Bugs@search');
 
 Route::post('users/{id}', function ($id) {

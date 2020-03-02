@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $myBugs = \App\Bugs::where('userID', Auth::user() -> id) -> orderBy('created_at', 'desc') -> paginate(10);
+        return redirect('/user/'.Auth::user()->id);
     }
 }
