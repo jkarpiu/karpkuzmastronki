@@ -48,10 +48,10 @@
                             <a class="nav-link js-scroll-trigger" href="#about">O Nas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#features">Co Oferujemy</a>
+                            <a class="nav-link js-scroll-trigger" href="#features">Co oferujemy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#projects">Nasze Projekty</a>
+                            <a class="nav-link js-scroll-trigger" href="#projects">Nasze projekty</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a>
@@ -70,7 +70,7 @@
                         <hr class="divider my-4">
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5">Potrzebujesz jak najszybciej stworzyć stronę swojej firmy? A może sprzedajesz usługi i chciałbym mieć własny sklep internetowy, bądź blog? Nie czekaj dłużej i napisz do nas!</p>
+                        <p class="text-white-75 font-weight-light mb-5">Potrzebujesz jak najszybciej stworzyć stronę swojej firmy? A może sprzedajesz usługi i chciałbym mieć własny sklep internetowy, bądź blog? <br> Nie czekaj dłużej i napisz do nas!</p>
                         <a class="btn btn-success btn-xl js-scroll-trigger" href="#contact">Skontaktuj się z nami</a>
                     </div>
                 </div>
@@ -219,7 +219,7 @@
         <section class="page-section bg-dark text-white">
             <div class="container text-center">
                 <h2 class="mb-4">Masz jakiś problem ze swoją stroną?</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Zgłoś teraz!</a>
+                <a class="btn btn-light btn-xl" href="#">Zgłoś teraz!</a>
             </div>
         </section>
 
@@ -236,7 +236,7 @@
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                        <div>+1 (202) 555-0149</div>
+                        <div>+48 659 351 438</div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
