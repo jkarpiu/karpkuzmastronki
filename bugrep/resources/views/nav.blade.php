@@ -3,21 +3,32 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Główna<span class="sr-only">(current)</span></a>
+        <li class="nav-item @if($title=="")
+             active
+             @endif">
+          <a class="nav-link" href="/">Główna</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link add" href="/add">Dodaj</a>
+          <a class="nav-link add @if($title=='Dodaj')
+          active
+          @endif" href="/add">Dodaj</a>
         </li>
     </li>
     <li class="nav-item">
-      <a class="nav-link add" href="/browse">Przeglądaj</a>
+      <a class="nav-link add
+      @if($title=='Przeglądaj')
+          active
+          @endif
+      " href="/browse">Przeglądaj</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link add" href="/archive">Archiwum</a>
+        <a class="nav-link add
+        @if($title=='Archiwum')
+          active
+          @endif
+        " href="/archive">Archiwum</a>
       </li>
       </ul>
       <!-- Right Side Of Navbar -->
@@ -53,7 +64,7 @@
         @endguest
     </ul>
       <form class="form-inline my-2 my-lg-0" action="search" method="GET">
-        <input class="form-control mr-sm-2" type="search" name="item" placeholder="Wyszukaj BUG-a">
+        <input class="form-control mr-sm-2" type="search" name="item" placeholder="Wyszukaj BUG-a lub użytkownika">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
       </form>
     </div>

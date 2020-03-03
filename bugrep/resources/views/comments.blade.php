@@ -27,6 +27,12 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-success">Naprawiono!</button>
                     </form>
+                    <form action="/comdel" method="post">
+                        <input type="hidden" name="comID" value="{{ $com->id }}">
+                        <input type="hidden" name="bugID" value="{{ $com->for_id }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="btn btn-danger">Usuń!</button>
+                    </form>
                     @elseif ($com -> fixes == 1)
                         <h4 style="background-color: green;">Ten komentarz naprawił to gówno</h4>
                     @endif

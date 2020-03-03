@@ -17,6 +17,7 @@ class Disc extends Migration
             $table->bigIncrements('id');
             $table->integer('for_id')->default(0);
             $table->string('username')->default(' ');
+            $table->integer('userID')->default(0);
             $table->longText('content')->default(' ');
             $table->integer('score')->default(0);
             $table->boolean('fixes')->default(0);
