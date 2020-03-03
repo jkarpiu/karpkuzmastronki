@@ -45,7 +45,7 @@ class Bugs extends Controller
         $list = \App\Bugs::where('fixed', 1)
         ->orderBy('created_at', 'desc')
         ->paginate(20);
-        return view('list', ['title' => 'Przeglądaj', 'list' => $list]);
+        return view('list', ['title' => 'Archiwum', 'list' => $list]);
     }
 
     public function view($bug_id) {
@@ -63,12 +63,18 @@ class Bugs extends Controller
     }
     public function search(){
         $searching = $_GET['item'];
-        $found = \App\Bugs::where('name', 'LIKE','%'.$searching.'%')
+        $foundBugs = \App\Bugs::where('name', 'LIKE','%'.$searching.'%')
             ->orWhere('desc', 'LIKE', '%'.$searching.'%')
             ->orderBy('created_at', 'desc')
             ->take(1)
             ->get();
-        return view('search', ['title' => 'Szukaj: '.$searching, 'finded' => $found]);
+        $foundUsers = \App\User::where('name', 'LIKE','%'.$searching.'%')
+            ->orWhere('email', 'LIKE', '%'.$searching.'%')
+            ->orderBy('created_at', 'desc')
+            ->take(1)
+            ->get();
+
+        return view('search', ['title' => 'Szukaj: '.$searching, 'findedB' => $foundBugs, 'findedU' => $foundUsers]);
     }
 
     public function commentadd(){
