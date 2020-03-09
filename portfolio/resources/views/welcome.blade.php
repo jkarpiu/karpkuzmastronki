@@ -36,7 +36,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img height="40px" src="img/brand.svg" alt="K&K Dev"></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">KarpKuzma</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -141,7 +141,7 @@
                                     Sklep internetowy
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Nazwa projektu
                                 </div>
                             </div>
                         </a>
@@ -154,7 +154,7 @@
                                     Blog
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Nazwa projektu
                                 </div>
                             </div>
                         </a>
@@ -167,7 +167,7 @@
                                     Portfolio
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Nazwa projektu
                                 </div>
                             </div>
                         </a>
@@ -180,7 +180,7 @@
                                     Blog
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Nazwa projektu
                                 </div>
                             </div>
                         </a>
@@ -193,7 +193,7 @@
                                     Witryna szkoły
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Nazwa projektu
                                 </div>
                             </div>
                         </a>
@@ -206,7 +206,7 @@
                                     Sklep internetowy
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Nazwa projektu
                                 </div>
                             </div>
                         </a>
