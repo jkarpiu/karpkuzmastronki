@@ -5,7 +5,7 @@
                 Strona Firmowa
             </div>
             <nav>
-                <span class="navItem" v-bind:key="item.id" v-for="item in menu"><a class="navItemLink" :href="item.siteId">{{ item.name }}</a></span>
+                <span class="navItem" v-bind:key="item.id" v-for="item in data"><a class="navItemLink" :href="item.siteId">{{ item.name }}</a></span>
             </nav>
         </header>
     </div>
@@ -15,12 +15,7 @@
         props: ['data'],
         data() {
             return {
-                menu: this.data
-            }
-        },
-        watch:{
-            menuData: function(data) {
-                this.data
+
             }
         }
     }
