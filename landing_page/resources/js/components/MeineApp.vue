@@ -1,6 +1,7 @@
 <template>
     <div>
         <Navigation :data="data" />
+        <Contents :contents="data" />
     </div>
 </template>
 
