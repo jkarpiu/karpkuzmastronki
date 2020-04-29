@@ -1914,6 +1914,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['contents']
 });
@@ -1931,6 +1935,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
 //
 //
 //
@@ -38277,7 +38282,25 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "div",
+    _vm._l(_vm.contents, function(article) {
+      return _c(
+        "div",
+        {
+          key: article.id,
+          staticClass: "article",
+          attrs: { id: article.pageId }
+        },
+        [
+          _c("p", [
+            _vm._v("\n            " + _vm._s(article.content) + "\n        ")
+          ])
+        ]
+      )
+    }),
+    0
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38301,7 +38324,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("Navigation", { attrs: { data: _vm.data } })], 1)
+  return _c(
+    "div",
+    [
+      _c("Navigation", { attrs: { data: _vm.data } }),
+      _vm._v(" "),
+      _c("Contents", { attrs: { contents: _vm.data } })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
