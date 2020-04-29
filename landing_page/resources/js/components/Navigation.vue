@@ -34,11 +34,9 @@
     .navItemLink {
         text-decoration: none;
         color: black;
-
     }
     .navItemLink:hover {
         text-decoration: none;
         color: grey;
-        cursor: pointer;
     }
 </style>
