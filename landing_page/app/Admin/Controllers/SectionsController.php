@@ -26,13 +26,13 @@ class SectionsController extends AdminController
     {
         $grid = new Grid(new Sections());
 
-        $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
-        $grid->column('pageId', __('PageId'));
-        $grid->column('content', __('Content'));
-        $grid->column('style', __('Style'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('id', __('ID'));
+        $grid->column('name', __('Nazwa'));
+        $grid->column('pageId', __('ID sekcji (w sensie HTML)'));
+        $grid->column('content', __('Zawartość'));
+        $grid->column('style', __('Styl'));
+        $grid->column('created_at', __('Utworzono'));
+        $grid->column('updated_at', __('Zauktalizowano'));
 
         return $grid;
     }
