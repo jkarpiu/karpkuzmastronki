@@ -53,6 +53,10 @@ export default {
         display: inline-block;
         padding: 10px;
     }
+    .arrow:hover{
+        transform: scale(125%);
+        transform: rotate(-315deg);
+    }
     .down {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
@@ -62,6 +66,7 @@ export default {
         clear: both;
         position: absolute;
         bottom: 0;
+        left: 50vw;
         margin-left: auto;
         margin-right: auto;
         text-align: center;

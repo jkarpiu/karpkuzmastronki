@@ -2,6 +2,7 @@
     <div>
         <Navigation :data="data" />
         <Contents :contents="data" />
+        <Footer :contents="data"/>
     </div>
 </template>
 
