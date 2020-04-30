@@ -9,7 +9,7 @@ class apiController extends Controller
 {
     public function loadPage() {
         return response()->json(
-            Sections::orderBy('id', 'desc') -> get()
+            Sections::orderBy('id', 'asc') -> get()
         );
     }
 }

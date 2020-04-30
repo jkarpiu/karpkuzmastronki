@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
