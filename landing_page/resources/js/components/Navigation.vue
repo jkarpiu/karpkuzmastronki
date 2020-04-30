@@ -70,7 +70,8 @@
     .nav-element {
         transition: 0.4s;
         margin-top: 1.2rem;
-        margin-left: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
         margin-bottom: 0.5rem;
     }
     #brand, #menuBar {

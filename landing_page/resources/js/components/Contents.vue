@@ -1,10 +1,10 @@
 <template>
     <div class="allOfContents">
-        <div v-bind:key="article.id" v-for="article in contents" :id="article.pageId" class="article">
+        <div v-bind:key="article.id" v-for="article in contents" :id="article.pageId" :style="article.style"     class="article">
             <p :style="contentMargin(article.id)">
                 {{article.content}}
             </p>
-            <a class="nextPage" v-if="article.id < contents.length" :href="nextSectionID(article.id, contents)"><p><i class="arrow down"></i></p></a>
+            <a class="nextPage" v-if="article.id < contents.length"  :href="nextSectionID(article.id, contents)"><p><i class="arrow down"></i></p></a>
 
         </div>
     </div>

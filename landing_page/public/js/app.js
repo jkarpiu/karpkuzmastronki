@@ -6588,7 +6588,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#navigation[data-v-d456e682] {\n    display: flex;\n    justify-content: space-between;\n    align-content: space-between;\n    overflow: hidden;\n    position: fixed;\n    background: yellow;\n    top: 0;\n    width: 100%;\n    height: 4rem;\n    transition: 0.4s;\n    z-index: 99;\n}\n.navItem[data-v-d456e682]{\n    margin: 10px;\n}\n.navItemLink[data-v-d456e682] {\n    text-decoration: none;\n    color: black;\n}\n.navItemLink[data-v-d456e682]:hover {\n    text-decoration: none;\n    color: grey;\n    cursor: pointer;\n}\n.nav-element[data-v-d456e682] {\n    transition: 0.4s;\n    margin-top: 1.2rem;\n    margin-left: 30px;\n    margin-bottom: 0.5rem;\n}\n#brand[data-v-d456e682], #menuBar[data-v-d456e682] {\n    transition: 0.4s;\n}\n", ""]);
+exports.push([module.i, "\n#navigation[data-v-d456e682] {\n    display: flex;\n    justify-content: space-between;\n    align-content: space-between;\n    overflow: hidden;\n    position: fixed;\n    background: yellow;\n    top: 0;\n    width: 100%;\n    height: 4rem;\n    transition: 0.4s;\n    z-index: 99;\n}\n.navItem[data-v-d456e682]{\n    margin: 10px;\n}\n.navItemLink[data-v-d456e682] {\n    text-decoration: none;\n    color: black;\n}\n.navItemLink[data-v-d456e682]:hover {\n    text-decoration: none;\n    color: grey;\n    cursor: pointer;\n}\n.nav-element[data-v-d456e682] {\n    transition: 0.4s;\n    margin-top: 1.2rem;\n    margin-left: 40px;\n    margin-right: 40px;\n    margin-bottom: 0.5rem;\n}\n#brand[data-v-d456e682], #menuBar[data-v-d456e682] {\n    transition: 0.4s;\n}\n", ""]);
 
 // exports
 
@@ -38373,6 +38373,7 @@ var render = function() {
         {
           key: article.id,
           staticClass: "article",
+          style: article.style,
           attrs: { id: article.pageId }
         },
         [

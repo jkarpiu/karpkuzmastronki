@@ -18,7 +18,7 @@ class CreateSectionsTable extends Migration
             $table->string('name');
             $table->string('pageId');
             $table->longText('content');
-            $table->longText('style');
+            $table->longText('style')->nullable();
             $table->timestamps();
         });
     }

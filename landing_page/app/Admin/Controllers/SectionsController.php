@@ -15,7 +15,7 @@ class SectionsController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Sections';
+    protected $title = 'Sekcje';
 
     /**
      * Make a grid builder.
@@ -26,13 +26,13 @@ class SectionsController extends AdminController
     {
         $grid = new Grid(new Sections());
 
-        $grid->column('id', __('ID'));
-        $grid->column('name', __('Nazwa'));
-        $grid->column('pageId', __('ID sekcji (w sensie HTML)'));
-        $grid->column('content', __('Zawartość'));
-        $grid->column('style', __('Styl'));
-        $grid->column('created_at', __('Utworzono'));
-        $grid->column('updated_at', __('Zauktalizowano'));
+        $grid->column('id', __('ID'))->editable() -> sortable();
+        $grid->column('name', __('Nazwa'))->editable() -> sortable();
+        $grid->column('pageId', __('ID sekcji (w sensie HTML)'))->editable() -> sortable();
+        $grid->column('content', __('Zawartość'))->editable()  -> sortable();
+        $grid->column('style', __('Style(CSS)'))->editable()  -> sortable();
+        $grid->column('created_at', __('Utworzono')) -> sortable();
+        $grid->column('updated_at', __('Zauktalizowano')) -> sortable() ;
 
         return $grid;
     }
@@ -67,10 +67,10 @@ class SectionsController extends AdminController
     {
         $form = new Form(new Sections());
 
-        $form->text('name', __('Name'));
-        $form->text('pageId', __('PageId'));
-        $form->textarea('content', __('Content'));
-        $form->textarea('style', __('Style'));
+        $form->text('name', __('Nazwa'));
+        $form->text('pageId', __('ID sekcji (w sensie HTML)'));
+        $form->textarea('content', __('Zawartość'));
+        $form->textarea('style', __('Style(CSS'));
 
         return $form;
     }
